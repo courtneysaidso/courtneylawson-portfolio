@@ -1592,7 +1592,8 @@ function pageAbout(){
   var heroText = '<p class="lbl">'+esc(a.label)+'</p>'+
     '<h1 class="h-display" style="font-size:clamp(38px,6.4vw,76px);margin:18px 0 32px;max-width:17ch">'+esc(a.title)+'</h1>'+
     '<div style="max-width:64ch">'+a.paragraphs.map(function(x){
-      return '<p class="lede" style="margin-bottom:20px">'+esc(x)+'</p>'; }).join("")+'</div>';
+      return '<p class="lede" style="margin-bottom:20px">'+esc(x)+'</p>'; }).join("")+'</div>'+
+    '<div class="hero-actions">'+resumeBtn("btn","Download résumé →")+'<a class="btn ghost" href="#/contact" data-link>Contact</a></div>';
   var heroBlock = a.photo && a.photo.src
     ? '<div class="about-hero"><div>'+heroText+'</div><div>'+slot(a.photo)+'</div></div>'
     : heroText;
